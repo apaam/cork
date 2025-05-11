@@ -451,7 +451,7 @@ bool Mesh<VertData, TriData>::TopoCache::isValid()
 
 
 
-std::ostream& operator<<(std::ostream &out, const TopoVert& vert)
+inline std::ostream& operator<<(std::ostream &out, const TopoVert& vert)
 {
     out << "ref(" << vert.ref << ") "
         << "e(" << vert.edges.size() << "):";
@@ -464,7 +464,7 @@ std::ostream& operator<<(std::ostream &out, const TopoVert& vert)
     return out;
 }
 
-std::ostream& operator<<(std::ostream &out, const TopoEdge& edge)
+inline std::ostream& operator<<(std::ostream &out, const TopoEdge& edge)
 {
     out << "v(2):" << edge.verts[0] << "(" << edge.verts[0]->ref << ");"
                    << edge.verts[1] << "(" << edge.verts[1]->ref << ");";
@@ -475,7 +475,7 @@ std::ostream& operator<<(std::ostream &out, const TopoEdge& edge)
     return out;
 }
 
-std::ostream& operator<<(std::ostream &out, const TopoTri& tri)
+inline std::ostream& operator<<(std::ostream &out, const TopoTri& tri)
 {
     out << "ref(" << tri.ref << ") ";
     out << "v(3):" << tri.verts[0] << "(" << tri.verts[0]->ref << ");"
