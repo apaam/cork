@@ -1,3 +1,14 @@
+#ifndef CORK_TRIANGLE_H
+#define CORK_TRIANGLE_H
+
+/* Define REAL type */
+#ifndef SINGLE
+#define REAL double
+#else
+#define REAL float
+#endif
+
+
 /*****************************************************************************/
 /*                                                                           */
 /*  (triangle.h)                                                             */
@@ -287,3 +298,4 @@ void trifree(void *memptr);
 /*void triangulate();
 void trifree();*/
 /*#endif*/ /* not ANSI_DECLARATORS */
+#endif /* CORK_TRIANGLE_H */
